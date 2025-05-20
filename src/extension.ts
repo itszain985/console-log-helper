@@ -43,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
                 const currentLineNum = selection.active.line;
                 const currentLine = editor.document.lineAt(currentLineNum);
                 const indent = currentLine.text.substring(0, currentLine.firstNonWhitespaceCharacterIndex);
-
+   
                 const logStatement = `${indent}console.log("${selectedText}------> (${newCount})", ${selectedText});\n`;
 
                 const insertPosition = new vscode.Position(currentLineNum + 1, 0);
